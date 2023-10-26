@@ -54,12 +54,12 @@ computerNumber.addEventListener("click", function () {
 2. all'interno del eventListener che genera il numero rando ci sono due funzioni:
     - la funzione randomNumber che genera il numero random
     - e la funzione che calcola e stampa il risultato
-3. nella funzione che calcola il risultato c'è un'altra funzione che restituisce un valore booleano che determina se una somma tra due numeri è pari o dispari. La funzione si chiama odd_Or_Even_Sum(number1, number2) ed è composta da due variabili:
+3. nella funzione che calcola il risultato c'è un'altra funzione che restituisce un valore booleano che determina se una somma tra due numeri è pari o dispari. La funzione si chiama oddOrEvenSum(number1, number2) ed è composta da due variabili:
     - la variabile sum = number1 + number2 che calola la somma tra i due argomenti;
     - la condition flag che diventa true quando la somma restituisce un valore pari
 
 ```javascript
-function odd_Or_Even_Sum(number1, number2) {
+function oddOrEvenSum(number1, number2) {
   let sum = number1 + number2;
   let flag = false;
   if (sum % 2 === 0) {
@@ -71,7 +71,7 @@ function odd_Or_Even_Sum(number1, number2) {
 ```
 <br>
 
-4. la funzione checkResult() imposta le 4 condizioni in virtù delle quali si stabilisce chi ha vinto. Queste condizioni sono impostate in base alla funzione odd_Or_Even_Sum(number1, number2), che, a seconda se restituisce un valore true o false e in base alle scelte dell'utente, determina il messaggio da stampare nel DOM
+4. la funzione checkResult() imposta le 4 condizioni in virtù delle quali si stabilisce chi ha vinto. Queste condizioni sono impostate in base alla funzione oddOrEvenSum(number1, number2), che, a seconda se restituisce un valore true o false e in base alle scelte dell'utente, determina il messaggio da stampare nel DOM
 
 ```javascript
 // funzione che stampa il risultato
@@ -79,14 +79,14 @@ function checkResult() {
   let sum = randomNum + numberUserSelect;
   message = "";
 
-  if (userChoice == "even" && odd_Or_Even_Sum(randomNum, numberUserSelect)) {
+  if (userChoice == "even" && oddOrEvenSum(randomNum, numberUserSelect)) {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è pari, l'utente ha vinto`
     );
     message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è pari, l'utente ha <span class="result-span">vinto</span>`;
   } else if (
     userChoice === "odd" &&
-    !odd_Or_Even_Sum(randomNum, numberUserSelect)
+    !oddOrEvenSum(randomNum, numberUserSelect)
   ) {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`
@@ -94,7 +94,7 @@ function checkResult() {
     message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`;
   } else if (
     userChoice == "even" &&
-    !odd_Or_Even_Sum(randomNum, numberUserSelect)
+    !oddOrEvenSum(randomNum, numberUserSelect)
   ) {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha perso`

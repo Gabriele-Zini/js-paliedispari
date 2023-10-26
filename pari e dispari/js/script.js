@@ -45,7 +45,7 @@ function randomNumber() {
 }
 
 // funzione per sapere se la somma dei due numeri è pari o dispari
-function odd_Or_Even_Sum(number1, number2) {
+function oddOrEvenSum(number1, number2) {
   let sum = number1 + number2;
   let flag = false;
   if (sum % 2 === 0) {
@@ -59,14 +59,14 @@ function checkResult() {
   let sum = randomNum + numberUserSelect;
   message = "";
 
-  if (userChoice == "even" && odd_Or_Even_Sum(randomNum, numberUserSelect)) {
+  if (userChoice == "even" && oddOrEvenSum(randomNum, numberUserSelect)) {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è pari, l'utente ha vinto`
     );
     message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è pari, l'utente ha <span class="result-span">vinto</span>`;
   } else if (
     userChoice === "odd" &&
-    !odd_Or_Even_Sum(randomNum, numberUserSelect)
+    !oddOrEvenSum(randomNum, numberUserSelect)
   ) {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`
@@ -74,7 +74,7 @@ function checkResult() {
     message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`;
   } else if (
     userChoice == "even" &&
-    !odd_Or_Even_Sum(randomNum, numberUserSelect)
+    !oddOrEvenSum(randomNum, numberUserSelect)
   ) {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha perso`
