@@ -1,0 +1,43 @@
+/* RESET */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+/* Utilities */
+
+.d-glex {
+    display: flex;
+}
+
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.container {
+    width:50%;
+    margin: 0 auto;
+}
+
+.bg-red {
+    background-color: red;
+    color: white;
+}
+
+.result-span {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button {
+    padding: .5rem 1rem;
+    border-radius: 20px;
+}
+
+#even-btn {
+margin-left: 1rem;
+margin-right: 1rem;
+}
