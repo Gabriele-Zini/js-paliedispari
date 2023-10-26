@@ -56,7 +56,10 @@ function isPalindrome(word) {
 
 <br>
 
-6.  si imposta una funzion myTrimmed per invalidare l'userInput composto solo da spazi vuoti; - la funzione ha un argomento word - all'interno della funzione si dichiara una variabile wordTrimmed con valore " "; - si effettua un ciclo su word e ogni volta che word[i] è diverso da uno spazio vuoto si aggiunge alla variabile wordTrimmed: in questo modo la parola o le parole non hanno oiù spazi vuoti
+6.  si imposta una funzion myTrimmed per invalidare l'userInput composto solo da spazi vuoti; 
+    - la funzione ha un argomento word 
+    - all'interno della funzione si dichiara una variabile wordTrimmed con valore " "; 
+    - si effettua un ciclo su word e ogni volta che word[i] è diverso da uno spazio vuoto si aggiunge alla variabile wordTrimmed: in questo modo la parola o le parole non hanno oiù spazi vuoti
 
 ```javascript
 // funzione trimmer personalizzata
