@@ -5,11 +5,11 @@ userWord = myTrim(userWord);
 // main code
 isPalindrome(userWord);
 if (!isPalindrome(userWord)) {
-  alert(`${userWord} non è una parola palindroma`);
+  alert(`${userWord} non è una parola/frase palindroma`);
 } else if (!myTrim(userWord)) {
   alert("non si possono inserire solo spazi vuoti");
 } else {
-  alert(`${userWord} è una parola palindroma`);
+  alert(`${userWord} è una parola/frase palindroma`);
 }
 
 // funzione verifica palindromi
