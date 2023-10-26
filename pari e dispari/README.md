@@ -113,7 +113,7 @@ function checkResult() {
 5. Infine la funzione che calcola il risultato viene inserita nell'eventListener che genera il numero random del computer da 1 a 5 insieme alla funzione randomNumber() e a result con la proprietà .innerHTML per stampare l'algoritmo sul DOM.
 
 ```javascript
-// bottone per generare un numero random del computer  e srampare il risultato nel DOM
+// bottone per generare un numero random del computer  e stampare il risultato nel DOM
 computerNumber.addEventListener("click", function () {
   randomNumber();
   checkResult();

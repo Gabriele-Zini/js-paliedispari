@@ -1,14 +1,22 @@
+// VARIABLES
+
+// const variables
 const eventBtn = document.getElementById("even-btn");
 const oddBtn = document.getElementById("odd-btn");
 const numberUser = document.getElementById("user-number");
+const computerNumber = document.getElementById("rnd-number");
+const result = document.querySelector(".result");
+
+// let variables
 let numberUserSelect;
 let randomNum;
-const computerNumber = document.getElementById("rnd-number");
 let userChoice;
-let result = document.querySelector(".result");
 let message = "";
 
-// event listener per il numero selezionato dall'utente
+
+// EVENT LISTENER
+
+// event listener per il numero selezionato dall'utente nell'elemento select
 numberUser.addEventListener("change", function () {
   numberUserSelect = parseInt(numberUser.value);
   console.log(numberUserSelect + " numero utente");
@@ -30,13 +38,16 @@ oddBtn.addEventListener("click", function () {
   eventBtn.classList.remove("bg-red");
 });
 
-// bottone per generare un numero random del computer e srampare il risultato nel DOM
+// bottone per generare un numero random del computer e stampare il risultato nel DOM
 computerNumber.addEventListener("click", function () {
   randomNumber();
   checkResult();
   console.log("---------------------------");
   result.innerHTML = message;
 });
+
+
+// FUNCTION
 
 // funzione per generare il numero random
 function randomNumber() {
