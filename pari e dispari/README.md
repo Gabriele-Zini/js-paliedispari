@@ -22,13 +22,11 @@ Dichiariamo chi ha vinto.
 // event listener per il numero selezionato dall'utente
 numberUser.addEventListener("change", function () {
   numberUserSelect = parseInt(numberUser.value);
-  console.log(numberUserSelect + " numero utente");
 });
 
 // bottone per scegliere dispari
 eventBtn.addEventListener("click", function () {
   userChoice = "even";
-  console.log("l'utente ha scelto pari");
   eventBtn.classList.add("bg-red");
   oddBtn.classList.remove("bg-red");
 });
@@ -36,7 +34,6 @@ eventBtn.addEventListener("click", function () {
 // bottone per scegliere pari
 oddBtn.addEventListener("click", function () {
   userChoice = "odd";
-  console.log("l'utente ha scelto dispari");
   oddBtn.classList.add("bg-red");
   eventBtn.classList.remove("bg-red");
 });
@@ -45,7 +42,6 @@ oddBtn.addEventListener("click", function () {
 computerNumber.addEventListener("click", function () {
   randomNumber();
   checkResult();
-  console.log("---------------------------");
   result.innerHTML = message;
 });
 ```
@@ -80,30 +76,18 @@ function checkResult() {
   message = "";
 
   if (userChoice == "even" && oddOrEvenSum(randomNum, numberUserSelect)) {
-    console.log(
-      `${randomNum} + ${numberUserSelect} = ${sum} è pari, l'utente ha vinto`
-    );
     message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è pari, l'utente ha <span class="result-span">vinto</span>`;
   } else if (
     userChoice === "odd" &&
     !oddOrEvenSum(randomNum, numberUserSelect)
   ) {
-    console.log(
-      `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`
-    );
     message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`;
   } else if (
     userChoice == "even" &&
     !oddOrEvenSum(randomNum, numberUserSelect)
   ) {
-    console.log(
-      `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha perso`
-    );
     message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è dispari, l'utente ha <span class="result-span">perso</span>`;
   } else {
-    console.log(
-      `${randomNum} + ${numberUserSelect} = ${sum} è pari, l'utente ha perso`
-    );
     message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è pari, l'utente ha <span class="result-span">perso</span>`;
   }
 }
@@ -117,7 +101,6 @@ function checkResult() {
 computerNumber.addEventListener("click", function () {
   randomNumber();
   checkResult();
-  console.log("---------------------------");
   result.innerHTML = message;
 });
 ```
