@@ -1,6 +1,6 @@
 // variabile con prompt dell'utente
 let userWord = prompt("inserisci una parola");
-
+userWord = myTrim(userWord);
 
 // main code
 isPalindrome(userWord);
@@ -11,8 +11,6 @@ if (!isPalindrome(userWord)) {
 } else {
   alert(`${userWord} è una parola palindroma`);
 }
-
-
 
 // funzione verifica palindromi
 function isPalindrome(word) {
@@ -37,7 +35,6 @@ function isPalindrome(word) {
   return flag;
 }
 
-
 // funzione trimmer personalizzata
 function myTrim(word) {
   let wordTrimmed = "";
@@ -48,3 +45,5 @@ function myTrim(word) {
   }
   return wordTrimmed;
 }
+
+console.log(myTrim("hello world"));
