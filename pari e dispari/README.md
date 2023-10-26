@@ -50,6 +50,7 @@ computerNumber.addEventListener("click", function () {
 });
 ```
 <br>
+
 2. all'interno del eventListener che genera il numero rando ci sono due funzioni:
     - la funzione randomNumber che genera il numero random
     - e la funzione che calcola e stampa il risultato
