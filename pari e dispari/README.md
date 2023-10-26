@@ -19,7 +19,7 @@ Dichiariamo chi ha vinto.
 1. si impostano gli eventListener per gli input dell'utente e per il bottone che genera il numero random del computer e stampa il risultato;
 
 ```javascript
-/ event listener per il numero selezionato dall'utente
+// event listener per il numero selezionato dall'utente
 numberUser.addEventListener("change", function () {
   numberUserSelect = parseInt(numberUser.value);
   console.log(numberUserSelect + " numero utente");
