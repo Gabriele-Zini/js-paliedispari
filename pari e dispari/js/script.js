@@ -18,19 +18,19 @@ numberUser.addEventListener("change", function () {
 eventBtn.addEventListener("click", function () {
   userChoice = "even";
   console.log("l'utente ha scelto pari");
-  eventBtn.classList.add("bg-red")
-  oddBtn.classList.remove("bg-red")
+  eventBtn.classList.add("bg-red");
+  oddBtn.classList.remove("bg-red");
 });
 
 // bottone per scegliere pari
 oddBtn.addEventListener("click", function () {
   userChoice = "odd";
   console.log("l'utente ha scelto dispari");
-  oddBtn.classList.add("bg-red")
-  eventBtn.classList.remove("bg-red")
+  oddBtn.classList.add("bg-red");
+  eventBtn.classList.remove("bg-red");
 });
 
-// bottone per generare un numero random del computer
+// bottone per generare un numero random del computer e srampare il risultato nel DOM
 computerNumber.addEventListener("click", function () {
   randomNumber();
   checkResult();
@@ -80,10 +80,7 @@ function checkResult() {
       `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha perso`
     );
     message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è dispari, l'utente ha <span class="result-span">perso</span>`;
-  } else if (
-    userChoice === "odd" &&
-    odd_Or_Even_Sum(randomNum, numberUserSelect)
-  ) {
+  } else {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è pari, l'utente ha perso`
     );
