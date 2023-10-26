@@ -7,7 +7,7 @@ isPalindrome(userWord);
 if (!isPalindrome(userWord)) {
   alert(`${userWord} non è una parola palindroma`);
 } else if (!myTrim(userWord)) {
-  alert("non si possono inserire solo spazi bianchi");
+  alert("non si possono inserire solo spazi vuoti");
 } else {
   alert(`${userWord} è una parola palindroma`);
 }
