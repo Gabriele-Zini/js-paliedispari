@@ -21,6 +21,7 @@ let string = "";
 let pal = "";
 let flag = false;
 ```
+
 <br>
 
 2. si impostano due cicli for, uno che incrementa e uno che decrementa, sulla lunghezza della stringa word.
@@ -52,24 +53,26 @@ function isPalindrome(word) {
   return flag;
 }
 ```
+
 <br>
 
 6.  si imposta una funzion myTrimmed per invalidare l'userInput composto solo da spazi vuoti; - la funzione ha un argomento word - all'interno della funzione si dichiara una variabile wordTrimmed con valore " "; - si effettua un ciclo su word e ogni volta che word[i] è diverso da uno spazio vuoto si aggiunge alla variabile wordTrimmed: in questo modo la parola o le parole non hanno oiù spazi vuoti
 
-        ```javascript
-
-    // funzione trimmer personalizzata
-    function myTrim(word) {
-    let wordTrimmed = "";
-    for (i = 0; i < word.length; i++) {
+```javascript
+// funzione trimmer personalizzata
+function myTrim(word) {
+  let wordTrimmed = "";
+  for (i = 0; i < word.length; i++) {
     if (word[i] !== " ") {
-    wordTrimmed += word[i];
+      wordTrimmed += word[i];
     }
-    }
-    return wordTrimmed;
-    }
-    ```
-    <br>
+  }
+  return wordTrimmed;
+}
+```
+
+<br>
+
 7. si invoca la funzione isPalindrome() con argomento l'input dell'utente e si imposta la condizione per determinare qualche messassio mettere nell'alert.
 
 ```javascript
@@ -82,5 +85,4 @@ if (!isPalindrome(userWord)) {
 } else {
   alert(`${userWord} è una parola palindroma`);
 }
-
 ```
