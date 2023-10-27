@@ -40,7 +40,7 @@ oddBtn.addEventListener("click", function () {
 // bottone per generare un numero random del computer e stampare il risultato nel DOM
 computerNumber.addEventListener("click", function () {
   randomNumber(1, 5);
-  checkResult();
+  checkResult(randomNum, numberUserSelect, userChoice);
   console.log("---------------------------");
   result.innerHTML = message;
 });
@@ -64,35 +64,23 @@ function oddOrEvenSum(number1, number2) {
 }
 
 // funzione che stampa il risultato
-function checkResult() {
-  let sum = randomNum + numberUserSelect;
+function checkResult(num1, num2, choice) {
+  let sum = num1 + num2;
   message = "";
 
-  if (userChoice == "even" && oddOrEvenSum(randomNum, numberUserSelect)) {
+  if (choice == "even" && oddOrEvenSum(num1, num2)) {
+    console.log(`${num1} + ${num2} = ${sum} è pari, l'utente ha vinto`);
+    message = `${num1} (numero del computer) + ${num2} (numero dell'utente) = ${sum} è pari, l'utente ha <span class="result-span">vinto</span>`;
+  } else if (choice === "odd" && !oddOrEvenSum(num1, num2)) {
     console.log(
-      `${randomNum} + ${numberUserSelect} = ${sum} è pari, l'utente ha vinto`
+      `${num1} + ${num2} = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`
     );
-    message = `${randomNum} (numero del computer) + ${numberUserSelect} (numero dell'utente) = ${sum} è pari, l'utente ha <span class="result-span">vinto</span>`;
-  } else if (
-    userChoice === "odd" &&
-    !oddOrEvenSum(randomNum, numberUserSelect)
-  ) {
-    console.log(
-      `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`
-    );
-    message = `${randomNum} (numero del computer) + ${numberUserSelect} (numero dell'utente) = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`;
-  } else if (
-    userChoice == "even" &&
-    !oddOrEvenSum(randomNum, numberUserSelect)
-  ) {
-    console.log(
-      `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha perso`
-    );
-    message = `${randomNum} (numero del computer) + ${numberUserSelect} (numero dell'utente) = ${sum} è dispari, l'utente ha <span class="result-span">perso</span>`;
+    message = `${num1} (numero del computer) + ${num2} (numero dell'utente) = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`;
+  } else if (choice == "even" && !oddOrEvenSum(num1, num2)) {
+    console.log(`${num1} + ${num2} = ${sum} è dispari, l'utente ha perso`);
+    message = `${num1} (numero del computer) + ${num2} (numero dell'utente) = ${sum} è dispari, l'utente ha <span class="result-span">perso</span>`;
   } else {
-    console.log(
-      `${randomNum} + ${numberUserSelect} = ${sum} è pari, l'utente ha perso`
-    );
-    message = `${randomNum} (numero del computer) + ${numberUserSelect} (numero dell'utente) = ${sum} è pari, l'utente ha <span class="result-span">perso</span>`;
+    console.log(`${num1} + ${num2} = ${sum} è pari, l'utente ha perso`);
+    message = `${num1} (numero del computer) + ${num2} (numero dell'utente) = ${sum} è pari, l'utente ha <span class="result-span">perso</span>`;
   }
 }
