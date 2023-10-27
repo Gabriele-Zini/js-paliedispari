@@ -20,6 +20,7 @@ function isPalindrome(word) {
   word = word.toLowerCase();
   for (let i = 0; i < word.length; i++) {
     string += word[i];
+    // pal = word[i] + pal;
   }
   console.log(string);
 

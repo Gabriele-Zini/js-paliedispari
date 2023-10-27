@@ -74,7 +74,7 @@ function checkResult() {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è pari, l'utente ha vinto`
     );
-    message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è pari, l'utente ha <span class="result-span">vinto</span>`;
+    message = `${randomNum} (numero del computer) + ${numberUserSelect} (numero dell'utente) = ${sum} è pari, l'utente ha <span class="result-span">vinto</span>`;
   } else if (
     userChoice === "odd" &&
     !oddOrEvenSum(randomNum, numberUserSelect)
@@ -82,7 +82,7 @@ function checkResult() {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`
     );
-    message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`;
+    message = `${randomNum} (numero del computer) + ${numberUserSelect} (numero dell'utente) = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`;
   } else if (
     userChoice == "even" &&
     !oddOrEvenSum(randomNum, numberUserSelect)
@@ -90,11 +90,11 @@ function checkResult() {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è dispari, l'utente ha perso`
     );
-    message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è dispari, l'utente ha <span class="result-span">perso</span>`;
+    message = `${randomNum} (numero del computer) + ${numberUserSelect} (numero dell'utente) = ${sum} è dispari, l'utente ha <span class="result-span">perso</span>`;
   } else {
     console.log(
       `${randomNum} + ${numberUserSelect} = ${sum} è pari, l'utente ha perso`
     );
-    message = `${randomNum} (numero dell'utente) + ${numberUserSelect} (numero del computer) = ${sum} è pari, l'utente ha <span class="result-span">perso</span>`;
+    message = `${randomNum} (numero del computer) + ${numberUserSelect} (numero dell'utente) = ${sum} è pari, l'utente ha <span class="result-span">perso</span>`;
   }
 }
