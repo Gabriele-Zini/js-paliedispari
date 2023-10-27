@@ -13,7 +13,6 @@ let randomNum;
 let userChoice;
 let message = "";
 
-
 // EVENT LISTENER
 
 // event listener per il numero selezionato dall'utente nell'elemento select
@@ -40,19 +39,18 @@ oddBtn.addEventListener("click", function () {
 
 // bottone per generare un numero random del computer e stampare il risultato nel DOM
 computerNumber.addEventListener("click", function () {
-  randomNumber();
+  randomNumber(1, 5);
   checkResult();
   console.log("---------------------------");
   result.innerHTML = message;
 });
 
-
 // FUNCTION
 
 // funzione per generare il numero random
-function randomNumber() {
-  randomNum = Math.floor(Math.random() * 5 + 1);
-  console.log(randomNum + " numero computer");
+function randomNumber(min, max) {
+  randomNum = Math.floor(Math.random() * (max - min)) + min;
+  return randomNum;
 }
 
 // funzione per sapere se la somma dei due numeri è pari o dispari
