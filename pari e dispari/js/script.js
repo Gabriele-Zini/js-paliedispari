@@ -68,7 +68,7 @@ function checkResult(num1, num2, choice) {
   let sum = num1 + num2;
   message = "";
 
-  if (choice == "even" && oddOrEvenSum(num1, num2)) {
+  if (choice === "even" && oddOrEvenSum(num1, num2)) {
     console.log(`${num1} + ${num2} = ${sum} è pari, l'utente ha vinto`);
     message = `${num1} (numero del computer) + ${num2} (numero dell'utente) = ${sum} è pari, l'utente ha <span class="result-span">vinto</span>`;
   } else if (choice === "odd" && !oddOrEvenSum(num1, num2)) {
@@ -76,7 +76,7 @@ function checkResult(num1, num2, choice) {
       `${num1} + ${num2} = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`
     );
     message = `${num1} (numero del computer) + ${num2} (numero dell'utente) = ${sum} è dispari, l'utente ha <span class="result-span">vinto</span>`;
-  } else if (choice == "even" && !oddOrEvenSum(num1, num2)) {
+  } else if (choice === "even" && !oddOrEvenSum(num1, num2)) {
     console.log(`${num1} + ${num2} = ${sum} è dispari, l'utente ha perso`);
     message = `${num1} (numero del computer) + ${num2} (numero dell'utente) = ${sum} è dispari, l'utente ha <span class="result-span">perso</span>`;
   } else {
