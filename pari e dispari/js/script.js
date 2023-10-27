@@ -54,8 +54,8 @@ function randomNumber(min, max) {
 }
 
 // funzione per sapere se la somma dei due numeri è pari o dispari
-function oddOrEvenSum(number1, number2) {
-  let sum = number1 + number2;
+function oddOrEvenSum(num1, num2) {
+  let sum = num1 + num2;
   let flag = false;
   if (sum % 2 === 0) {
     flag = true;
