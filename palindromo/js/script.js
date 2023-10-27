@@ -20,14 +20,9 @@ function isPalindrome(word) {
   word = word.toLowerCase();
   for (let i = 0; i < word.length; i++) {
     string += word[i];
-    // pal = word[i] + pal;
+    pal = word[i] + pal;
   }
   console.log(string);
-
-  for (let i = word.length - 1; i >= 0; i--) {
-    pal += word[i];
-  }
-  console.log(pal);
 
   if (string === pal) {
     flag = true;
